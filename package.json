@@ -1,5 +1,5 @@
 {
-  "name": "jsend-express",
+  "name": "easy-jsend",
   "version": "1.0.0",
   "description": "Adds jSend response functions to express.response prototype",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DeadAlready/jsend-express.git"
+    "url": "https://github.com/DeadAlready/easy-jsend.git"
   },
   "keywords": [
     "express",
@@ -17,9 +17,9 @@
   "author": "Karl Düüna",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DeadAlready/jsend-express/issues"
+    "url": "https://github.com/DeadAlready/easy-jsend/issues"
   },
-  "homepage": "https://github.com/DeadAlready/jsend-express",
+  "homepage": "https://github.com/DeadAlready/easy-jsend",
   "peerDependencies": {
     "express": "*"
   }
