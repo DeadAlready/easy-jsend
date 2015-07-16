@@ -9,7 +9,7 @@ Init
 	var express = require('express');
 	var jSend = require('express-jsend');
 	
-	jSend.init(express, { partial: true});
+	jSend.init({ partial: true });
 	
 And then you can send response
 
