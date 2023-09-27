@@ -6,22 +6,22 @@ Module for adding [jSend standard](http://labs.omniti.com/labs/jsend) functions 
 
 Init
 
-	var express = require('express');
-	var jSend = require('express-jsend');
-	
-	jSend.init({ partial: true });
-	
+    const express = require('express');
+    const jSend = require('express-jsend');
+
+    jSend.init(express);
+
+Or in TypeScript
+
+    import express from 'express';
+    import { init } from 'easy-jsend';
+    init(express);
+
 And then you can send response
 
-	app.get('/', function (req, res) {
-		res.success('My response');
-	});
-	
-## Configuration
-
-The module only has one configuration parameter 'partial'
-
-It determines if the partial response sending functions `.partial` and `.makePartial` are added to response object or not.
+    app.get('/', function (req, res) {
+    	res.success('My response');
+    });
 
 ## Functions
 
@@ -31,7 +31,7 @@ The following functions are added to the response object.
 
 Sends a success response with default status code of 200
 
-### fail(data, status = 400) 
+### fail(data, status = 400)
 
 Sends a fail response with default status code of 400
 
@@ -39,43 +39,21 @@ Sends a fail response with default status code of 400
 
 Sends an error response with default status of 500
 
-### partial(opts, status = 206)*
-
-This function is added with the configuration option partial
+### partial(opts, status = 206)\*
 
 Sends a partial response to the client by specifying Content-Range header in the manner of '{start}-{end}/{count}' indicating
 the range and total number of objects expected from this endpoint.
 
-Options 
+Options
 
-	{
+    {
     limit?: number;
     offset: number;
     count: number;
     data: any;
-  }
 
-### makePartial(opts)*
+}
 
-This function is added with the configuration option partial
-
-Constructs and sends a partial response to the client by specifying Content-Range header in the manner of '{start}-{end}/{count}' indicating
-the range and total number of objects expected from this endpoint.
-
-It will use the provided 'mongoose' model to determine the total count and then send the partial response.
-
-Options 
-
-	{
-		model:M.model<any>; <- the mongoose model
-		opts: {
-	    limit: number;
-	    skip: number;
-		};
-		search: Object;
-		result: any;
-	}
-	
 ## License
 
 The MIT License (MIT)
