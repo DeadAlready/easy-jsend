@@ -9,7 +9,7 @@ import expr from "express";
 declare global {
   namespace Express {
     interface Response {
-      success(data: unknown, status?: number): void;
+      success(data?: unknown, status?: number): void;
       fail(data: unknown, status?: number): void;
       error(err: any, status?: number): void;
       partial(
