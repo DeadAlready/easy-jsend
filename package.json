@@ -1,6 +1,6 @@
 {
   "name": "easy-jsend",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Adds jSend response functions to express.response prototype",
   "main": "index.js",
   "scripts": {
